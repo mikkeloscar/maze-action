@@ -4,7 +4,6 @@
 set -euo pipefail
 
 # UGNAME="builder"
-# REPO="https://beta.maze-ci.org/mikkeloscar/maze"
 repo="$1"
 packages="$2"
 token="$3"
@@ -31,8 +30,8 @@ for pkg in $(echo "$packages" | jq -c '.aur[]'); do
         args+=("--signing-key" "$key")
     done
 
-    # /usr/bin/maze-build "${args[@]}"
-    echo "${args[@]}"
+    /usr/bin/maze-build "${args[@]}"
+    # echo "${args[@]}"
 
     # clean build dir
     rm -rf build/*
