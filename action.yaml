@@ -1,0 +1,16 @@
+name: 'Maze'
+description: 'Build and push packages to Maze'
+inputs:
+  package:
+    description: "name of a package"
+    required: true
+    default: 'auracle'
+  signing_keys:
+    description: "comma separated list of signing keys"
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.package }}
+    - ${{ inputs.signing_keys }}

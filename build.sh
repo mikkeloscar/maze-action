@@ -1,38 +1,31 @@
 #!/usr/bin/env bash
 
-# set -x
 set -euo pipefail
 
-# UGNAME="builder"
 repo="$1"
-packages="$2"
-token="$3"
+package="$2"
+signing_keys="$3"
+token="$4"
+build_dir="$5"
 
-# setup build dir
-mkdir -p build
-# sudo chown 1000:1000 -R build 
+echo "args: repo:$repo, package:$package, signing_keys:$signing_keys"
 
-for pkg in $(echo "$packages" | jq -c '.aur[]'); do
-    name="$(echo "$pkg" | jq -r '.name')"
-    args=(
-        "--repo"
-        "$repo"
-        "--origin"
-        "aur"
-        "--package"
-        "$name"
-        "--upload"
-        "--token"
-        "$token"
-    )
+cd "$build_dir"
 
-    for key in $(echo "$pkg" | jq -r '. | select(.signing_keys!=null) | .signing_keys[]'); do
-        args+=("--signing-key" "$key")
-    done
+args=("--repo" "$repo"
+    "--origin" "aur"
+    "--package" "$package"
+    "--upload"
+    "--token" "$token"
+)
 
-    /usr/bin/maze-build "${args[@]}"
-    # echo "${args[@]}"
-
-    # clean build dir
-    rm -rf build/*
+IFS="," read -r -a keys <<< "$signing_keys"
+for key in "${keys[@]}"; do
+    args+=("--signing-key" "$key")
 done
+
+/usr/bin/maze-build "${args[@]}"
+
+# clean build dir (working dir)
+rm -rf "repo/"
+rm -rf "sources/"
