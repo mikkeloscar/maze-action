@@ -1,9 +1,6 @@
 FROM mikkeloscar/maze-build-gha:latest
 
 COPY build.sh /build.sh
+COPY entrypoint.sh /entrypoint.sh
 
-USER builder
-
-WORKDIR /home/builder
-
-ENTRYPOINT ["/build.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
