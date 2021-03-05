@@ -23,6 +23,10 @@ jobs:
     #   uses: ./
     #   with:
     #     package: "wlroots-git"
+    - name: "google-chrome"
+      uses: ./
+      with:
+        package: "google-chrome"
     - name: "scaleway-cli"
       uses: ./
       with:
