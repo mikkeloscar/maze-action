@@ -188,10 +188,10 @@ jobs:
       uses: ./
       with:
         package: "zoom"
-    - name: "eksctl"
-      uses: ./
-      with:
-        package: "eksctl"
+    # - name: "eksctl"
+    #   uses: ./
+    #   with:
+    #     package: "eksctl"
     - name: "python-i3-py"
       uses: ./
       with:
