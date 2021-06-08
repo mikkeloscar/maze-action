@@ -39,10 +39,10 @@ jobs:
       uses: ./
       with:
         package: "pacaur"
-    - name: "auracle"
+    - name: "auracle-git"
       uses: ./
       with:
-        package: "auracle"
+        package: "auracle-git"
     - name: "virtualbox-ext-oracle"
       uses: ./
       with:
