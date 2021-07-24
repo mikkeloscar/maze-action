@@ -172,10 +172,10 @@ jobs:
       uses: ./
       with:
         package: "mkdocs"
-    - name: "mkdocs-material"
-      uses: ./
-      with:
-        package: "mkdocs-material"
+    # - name: "mkdocs-material"
+    #   uses: ./
+    #   with:
+    #     package: "mkdocs-material"
     - name: "stern-bin"
       uses: ./
       with:
