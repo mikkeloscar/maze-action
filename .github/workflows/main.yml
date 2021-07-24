@@ -180,14 +180,6 @@ jobs:
       uses: ./
       with:
         package: "stern-bin"
-    - name: "ruby-travis"
-      uses: ./
-      with:
-        package: "ruby-travis"
-    - name: "ruby-connection_pool"
-      uses: ./
-      with:
-        package: "ruby-connection_pool"
     - name: "zoom"
       uses: ./
       with:
