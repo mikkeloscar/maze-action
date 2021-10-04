@@ -172,14 +172,14 @@ jobs:
       uses: ./
       with:
         package: "mkdocs"
-    - name: "mkdocs-material-extensions-git"
-      uses: ./
-      with:
-        package: "mkdocs-material-extensions-git"
-    - name: "mkdocs-material"
-      uses: ./
-      with:
-        package: "mkdocs-material"
+    # - name: "mkdocs-material-extensions-git"
+    #   uses: ./
+    #   with:
+    #     package: "mkdocs-material-extensions-git"
+    # - name: "mkdocs-material"
+    #   uses: ./
+    #   with:
+    #     package: "mkdocs-material"
     - name: "stern-bin"
       uses: ./
       with:
