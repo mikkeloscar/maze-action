@@ -8,11 +8,20 @@ env:
   MAZE_TOKEN: ${{ secrets.MAZE_TOKEN }}
 jobs:
   build_packages:
+    strategy:
+      matrix:
+        package:
+        - "google-chrome"
+        - "scaleway-cli"
     runs-on: ubuntu-latest
     name: Build Maze Packages
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: "${{ matrix.package }}"
+      uses: ./
+      with:
+        package: "${{ matrix.package }}"
     # - name: build
     #   id: build
     # - name: "sway-git"
@@ -23,208 +32,208 @@ jobs:
     #   uses: ./
     #   with:
     #     package: "wlroots-git"
-    - name: "google-chrome"
-      uses: ./
-      with:
-        package: "google-chrome"
-    - name: "scaleway-cli"
-      uses: ./
-      with:
-        package: "scaleway-cli"
-    - name: "google-cloud-sdk"
-      uses: ./
-      with:
-        package: "google-cloud-sdk"
-    - name: "pacaur"
-      uses: ./
-      with:
-        package: "pacaur"
-    - name: "auracle-git"
-      uses: ./
-      with:
-        package: "auracle-git"
-    - name: "virtualbox-ext-oracle"
-      uses: ./
-      with:
-        package: "virtualbox-ext-oracle"
-    - name: "xdg-utils-mimeo"
-      uses: ./
-      with:
-        package: "xdg-utils-mimeo"
-    - name: "mimeo"
-      uses: ./
-      with:
-        package: "mimeo"
-    # - name: "dropbox,"
+    # - name: "google-chrome"
     #   uses: ./
     #   with:
-    #     package: "dropbox,"
-    #     signing_keys: "FC918B335044912E"
-    - name: "chromium-widevine"
-      uses: ./
-      with:
-        package: "chromium-widevine"
-    - name: "profile-sync-daemon"
-      uses: ./
-      with:
-        package: "profile-sync-daemon"
-    - name: "gtk3-optional-csd"
-      uses: ./
-      with:
-        package: "gtk3-optional-csd"
-    - name: "jdk"
-      uses: ./
-      with:
-        package: "jdk"
-    - name: "gtk-theme-arc"
-      uses: ./
-      with:
-        package: "gtk-theme-arc"
-    - name: "gtk-theme-arc-git"
-      uses: ./
-      with:
-        package: "gtk-theme-arc-git"
-    - name: "arc-icon-theme"
-      uses: ./
-      with:
-        package: "arc-icon-theme"
-    - name: "arc-icon-theme-git"
-      uses: ./
-      with:
-        package: "arc-icon-theme-git"
-    - name: "moka-icon-theme-git"
-      uses: ./
-      with:
-        package: "moka-icon-theme-git"
-    - name: "android-sdk"
-      uses: ./
-      with:
-        package: "android-sdk"
-    - name: "android-sdk-build-tools"
-      uses: ./
-      with:
-        package: "android-sdk-build-tools"
-    - name: "android-sdk-platform-tools"
-      uses: ./
-      with:
-        package: "android-sdk-platform-tools"
-    - name: "android-ndk"
-      uses: ./
-      with:
-        package: "android-ndk"
-    - name: "android-support-repository"
-      uses: ./
-      with:
-        package: "android-support-repository"
-    - name: "android-google-apis"
-      uses: ./
-      with:
-        package: "android-google-apis"
-    - name: "android-google-repository"
-      uses: ./
-      with:
-        package: "android-google-repository"
-    - name: "android-studio"
-      uses: ./
-      with:
-        package: "android-studio"
-    - name: "android-sources"
-      uses: ./
-      with:
-        package: "android-sources"
-    - name: "leiningen"
-      uses: ./
-      with:
-        package: "leiningen"
-    - name: "python-grip-git"
-      uses: ./
-      with:
-        package: "python-grip-git"
-    - name: "visual-studio-code-bin"
-      uses: ./
-      with:
-        package: "visual-studio-code-bin"
-    - name: "google-cloud-sdk"
-      uses: ./
-      with:
-        package: "google-cloud-sdk"
-    - name: "kubectl-bin"
-      uses: ./
-      with:
-        package: "kubectl-bin"
-    - name: "minikube"
-      uses: ./
-      with:
-        package: "minikube"
-    - name: "pulseaudio-ctl"
-      uses: ./
-      with:
-        package: "pulseaudio-ctl"
-    - name: "upspin-git"
-      uses: ./
-      with:
-        package: "upspin-git"
-    - name: "minikube-bin"
-      uses: ./
-      with:
-        package: "minikube-bin"
-    - name: "mkdocs"
-      uses: ./
-      with:
-        package: "mkdocs"
-    # - name: "mkdocs-material-extensions-git"
+    #     package: "google-chrome"
+    # - name: "scaleway-cli"
     #   uses: ./
     #   with:
-    #     package: "mkdocs-material-extensions-git"
-    # - name: "mkdocs-material"
+    #     package: "scaleway-cli"
+    # - name: "google-cloud-sdk"
     #   uses: ./
     #   with:
-    #     package: "mkdocs-material"
-    - name: "stern-bin"
-      uses: ./
-      with:
-        package: "stern-bin"
-    - name: "zoom"
-      uses: ./
-      with:
-        package: "zoom"
-    # - name: "eksctl"
+    #     package: "google-cloud-sdk"
+    # - name: "pacaur"
     #   uses: ./
     #   with:
-    #     package: "eksctl"
-    - name: "python-i3-py"
-      uses: ./
-      with:
-        package: "python-i3-py"
-    - name: "cni-plugins-bin"
-      uses: ./
-      with:
-        package: "cni-plugins-bin"
-    - name: "obs-v4l2sink"
-      uses: ./
-      with:
-        package: "obs-v4l2sink"
-    - name: "aws-sam-cli"
-      uses: ./
-      with:
-        package: "aws-sam-cli"
-    - name: "aws-cli-v2"
-      uses: ./
-      with:
-        package: "aws-cli-v2"
-    - name: "aws-session-manager-plugin"
-      uses: ./
-      with:
-        package: "aws-session-manager-plugin"
-    - name: "kind"
-      uses: ./
-      with:
-        package: "kind"
-    - name: "kubelogin"
-      uses: ./
-      with:
-        package: "kubelogin"
-    - name: "crictl-bin"
-      uses: ./
-      with:
-        package: "crictl-bin"
+    #     package: "pacaur"
+    # - name: "auracle-git"
+    #   uses: ./
+    #   with:
+    #     package: "auracle-git"
+    # - name: "virtualbox-ext-oracle"
+    #   uses: ./
+    #   with:
+    #     package: "virtualbox-ext-oracle"
+    # - name: "xdg-utils-mimeo"
+    #   uses: ./
+    #   with:
+    #     package: "xdg-utils-mimeo"
+    # - name: "mimeo"
+    #   uses: ./
+    #   with:
+    #     package: "mimeo"
+    # # - name: "dropbox,"
+    # #   uses: ./
+    # #   with:
+    # #     package: "dropbox,"
+    # #     signing_keys: "FC918B335044912E"
+    # - name: "chromium-widevine"
+    #   uses: ./
+    #   with:
+    #     package: "chromium-widevine"
+    # - name: "profile-sync-daemon"
+    #   uses: ./
+    #   with:
+    #     package: "profile-sync-daemon"
+    # - name: "gtk3-optional-csd"
+    #   uses: ./
+    #   with:
+    #     package: "gtk3-optional-csd"
+    # - name: "jdk"
+    #   uses: ./
+    #   with:
+    #     package: "jdk"
+    # - name: "gtk-theme-arc"
+    #   uses: ./
+    #   with:
+    #     package: "gtk-theme-arc"
+    # - name: "gtk-theme-arc-git"
+    #   uses: ./
+    #   with:
+    #     package: "gtk-theme-arc-git"
+    # - name: "arc-icon-theme"
+    #   uses: ./
+    #   with:
+    #     package: "arc-icon-theme"
+    # - name: "arc-icon-theme-git"
+    #   uses: ./
+    #   with:
+    #     package: "arc-icon-theme-git"
+    # - name: "moka-icon-theme-git"
+    #   uses: ./
+    #   with:
+    #     package: "moka-icon-theme-git"
+    # - name: "android-sdk"
+    #   uses: ./
+    #   with:
+    #     package: "android-sdk"
+    # - name: "android-sdk-build-tools"
+    #   uses: ./
+    #   with:
+    #     package: "android-sdk-build-tools"
+    # - name: "android-sdk-platform-tools"
+    #   uses: ./
+    #   with:
+    #     package: "android-sdk-platform-tools"
+    # - name: "android-ndk"
+    #   uses: ./
+    #   with:
+    #     package: "android-ndk"
+    # - name: "android-support-repository"
+    #   uses: ./
+    #   with:
+    #     package: "android-support-repository"
+    # - name: "android-google-apis"
+    #   uses: ./
+    #   with:
+    #     package: "android-google-apis"
+    # - name: "android-google-repository"
+    #   uses: ./
+    #   with:
+    #     package: "android-google-repository"
+    # - name: "android-studio"
+    #   uses: ./
+    #   with:
+    #     package: "android-studio"
+    # - name: "android-sources"
+    #   uses: ./
+    #   with:
+    #     package: "android-sources"
+    # - name: "leiningen"
+    #   uses: ./
+    #   with:
+    #     package: "leiningen"
+    # - name: "python-grip-git"
+    #   uses: ./
+    #   with:
+    #     package: "python-grip-git"
+    # - name: "visual-studio-code-bin"
+    #   uses: ./
+    #   with:
+    #     package: "visual-studio-code-bin"
+    # - name: "google-cloud-sdk"
+    #   uses: ./
+    #   with:
+    #     package: "google-cloud-sdk"
+    # - name: "kubectl-bin"
+    #   uses: ./
+    #   with:
+    #     package: "kubectl-bin"
+    # - name: "minikube"
+    #   uses: ./
+    #   with:
+    #     package: "minikube"
+    # - name: "pulseaudio-ctl"
+    #   uses: ./
+    #   with:
+    #     package: "pulseaudio-ctl"
+    # - name: "upspin-git"
+    #   uses: ./
+    #   with:
+    #     package: "upspin-git"
+    # - name: "minikube-bin"
+    #   uses: ./
+    #   with:
+    #     package: "minikube-bin"
+    # - name: "mkdocs"
+    #   uses: ./
+    #   with:
+    #     package: "mkdocs"
+    # # - name: "mkdocs-material-extensions-git"
+    # #   uses: ./
+    # #   with:
+    # #     package: "mkdocs-material-extensions-git"
+    # # - name: "mkdocs-material"
+    # #   uses: ./
+    # #   with:
+    # #     package: "mkdocs-material"
+    # - name: "stern-bin"
+    #   uses: ./
+    #   with:
+    #     package: "stern-bin"
+    # - name: "zoom"
+    #   uses: ./
+    #   with:
+    #     package: "zoom"
+    # # - name: "eksctl"
+    # #   uses: ./
+    # #   with:
+    # #     package: "eksctl"
+    # - name: "python-i3-py"
+    #   uses: ./
+    #   with:
+    #     package: "python-i3-py"
+    # - name: "cni-plugins-bin"
+    #   uses: ./
+    #   with:
+    #     package: "cni-plugins-bin"
+    # - name: "obs-v4l2sink"
+    #   uses: ./
+    #   with:
+    #     package: "obs-v4l2sink"
+    # - name: "aws-sam-cli"
+    #   uses: ./
+    #   with:
+    #     package: "aws-sam-cli"
+    # - name: "aws-cli-v2"
+    #   uses: ./
+    #   with:
+    #     package: "aws-cli-v2"
+    # - name: "aws-session-manager-plugin"
+    #   uses: ./
+    #   with:
+    #     package: "aws-session-manager-plugin"
+    # - name: "kind"
+    #   uses: ./
+    #   with:
+    #     package: "kind"
+    # - name: "kubelogin"
+    #   uses: ./
+    #   with:
+    #     package: "kubelogin"
+    # - name: "crictl-bin"
+    #   uses: ./
+    #   with:
+    #     package: "crictl-bin"
