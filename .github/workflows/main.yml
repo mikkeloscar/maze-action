@@ -56,7 +56,7 @@ jobs:
         - {name: "obs-v4l2sink"}
         - {name: "aws-sam-cli"}
         - {name: "aws-cli-v2"}
-        - {name: "aws-session-manager-plugin"}
+        # - {name: "aws-session-manager-plugin"}
         - {name: "kind"}
         - {name: "kubelogin"}
         # - {name: "crictl-bin"}
