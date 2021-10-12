@@ -224,3 +224,7 @@ jobs:
       uses: ./
       with:
         package: "kubelogin"
+    - name: "crictl-bin"
+      uses: ./
+      with:
+        package: "crictl-bin"
