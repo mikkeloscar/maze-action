@@ -35,7 +35,7 @@ jobs:
         - {name: "android-sdk-build-tools"}
         - {name: "android-sdk-platform-tools"}
         - {name: "android-ndk"}
-        - {name: "android-support-repository"}
+        # - {name: "android-support-repository"}
         - {name: "android-google-apis"}
         - {name: "android-google-repository"}
         - {name: "android-studio"}
