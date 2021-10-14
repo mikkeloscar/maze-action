@@ -59,6 +59,7 @@ jobs:
         - {name: "aws-session-manager-plugin"}
         - {name: "kind"}
         - {name: "kubelogin"}
+        - {name: "akamai-bin"}
         # - {name: "crictl-bin"}
         # - {name: "mkdocs-material"}
         # - {name: "mkdocs-material-extensions-git"}
