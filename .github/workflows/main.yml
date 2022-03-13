@@ -13,7 +13,7 @@ jobs:
         package:
         # - {name: "sway-git"}
         # - {name: "wlroots-git"}
-        - {name: "dropbox", signing_keys: "FC918B335044912E"}
+        # - {name: "dropbox", signing_keys: "FC918B335044912E"}
         - {name: "google-chrome"}
         - {name: "scaleway-cli"}
         - {name: "google-cloud-sdk"}
