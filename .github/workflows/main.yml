@@ -38,7 +38,7 @@ jobs:
         - {name: "android-support-repository"}
         - {name: "android-google-apis"}
         - {name: "android-google-repository"}
-        - {name: "android-studio"}
+        # - {name: "android-studio"}
         - {name: "android-sources"}
         - {name: "python-grip-git"}
         - {name: "visual-studio-code-bin"}
