@@ -28,8 +28,6 @@ jobs:
         - {name: "jdk"}
         - {name: "gtk-theme-arc"}
         - {name: "gtk-theme-arc-git"}
-        - {name: "arc-icon-theme"}
-        - {name: "arc-icon-theme-git"}
         - {name: "moka-icon-theme-git"}
         - {name: "android-sdk"}
         - {name: "android-sdk-build-tools"}
