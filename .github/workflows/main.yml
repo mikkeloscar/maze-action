@@ -43,7 +43,7 @@ jobs:
         - {name: "kubectl-bin"}
         - {name: "minikube"}
         - {name: "pulseaudio-ctl"}
-        - {name: "upspin-git"}
+        # - {name: "upspin-git"}
         - {name: "minikube-bin"}
         - {name: "mkdocs"}
         - {name: "stern-bin"}
