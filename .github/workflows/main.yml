@@ -45,7 +45,7 @@ jobs:
         - {name: "pulseaudio-ctl"}
         # - {name: "upspin-git"}
         - {name: "minikube-bin"}
-        - {name: "mkdocs"}
+        # - {name: "mkdocs"}
         - {name: "stern-bin"}
         - {name: "zoom"}
         # - {name: "python-i3-py"}
