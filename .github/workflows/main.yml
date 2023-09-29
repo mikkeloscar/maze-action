@@ -50,7 +50,7 @@ jobs:
         - {name: "zoom"}
         # - {name: "python-i3-py"}
         - {name: "cni-plugins-bin"}
-        - {name: "obs-v4l2sink"}
+        # - {name: "obs-v4l2sink"}
         # - {name: "aws-sam-cli"}
         - {name: "aws-cli-v2-bin"}
         - {name: "aws-session-manager-plugin"}
