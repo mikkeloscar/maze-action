@@ -38,7 +38,7 @@ jobs:
         # - {name: "android-google-repository"}
         # - {name: "android-studio"}
         # - {name: "android-sources"}
-        # - {name: "python-grip-git"}
+        - {name: "python-grip-git"}
         - {name: "visual-studio-code-bin"}
         - {name: "kubectl-bin"}
         - {name: "minikube"}
