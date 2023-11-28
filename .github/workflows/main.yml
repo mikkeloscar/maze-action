@@ -28,7 +28,7 @@ jobs:
         - {name: "jdk"}
         - {name: "gtk-theme-arc"}
         - {name: "gtk-theme-arc-git"}
-        - {name: "moka-icon-theme-git"}
+        # - {name: "moka-icon-theme-git"}
         # - {name: "android-sdk"}
         # - {name: "android-sdk-build-tools"}
         # - {name: "android-sdk-platform-tools"}
@@ -38,7 +38,7 @@ jobs:
         # - {name: "android-google-repository"}
         # - {name: "android-studio"}
         # - {name: "android-sources"}
-        # - {name: "python-grip-git"}
+        - {name: "python-grip-git"}
         - {name: "visual-studio-code-bin"}
         - {name: "kubectl-bin"}
         - {name: "minikube"}
