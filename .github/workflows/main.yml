@@ -48,7 +48,7 @@ jobs:
         # - {name: "mkdocs"}
         - {name: "stern-bin"}
         - {name: "zoom"}
-        # - {name: "python-i3-py"}
+        - {name: "python-i3-py"}
         - {name: "cni-plugins-bin"}
         # - {name: "obs-v4l2sink"}
         # - {name: "aws-sam-cli"}
