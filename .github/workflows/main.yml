@@ -41,10 +41,10 @@ jobs:
         # - {name: "python-grip-git"}
         - {name: "visual-studio-code-bin"}
         - {name: "kubectl-bin"}
-        - {name: "minikube"}
+        # - {name: "minikube"}
         - {name: "pulseaudio-ctl"}
         # - {name: "upspin-git"}
-        - {name: "minikube-bin"}
+        # - {name: "minikube-bin"}
         # - {name: "mkdocs"}
         - {name: "stern-bin"}
         - {name: "zoom"}
