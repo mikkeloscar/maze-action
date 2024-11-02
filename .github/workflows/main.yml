@@ -59,7 +59,7 @@ jobs:
         - {name: "akamai-bin"}
         - {name: "trivy-bin"}
         - {name: "grype-bin"}
-        # - {name: "ausweisapp2"}
+        - {name: "ausweisapp2"}
         # - {name: "crictl-bin"}
         # - {name: "mkdocs-material"}
         # - {name: "mkdocs-material-extensions-git"}
