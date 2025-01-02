@@ -57,7 +57,7 @@ jobs:
         - {name: "kind"}
         - {name: "kubelogin"}
         - {name: "akamai-bin"}
-        - {name: "trivy-bin"}
+        # - {name: "trivy-bin"}
         - {name: "grype-bin"}
         - {name: "ausweisapp2"}
         # - {name: "crictl-bin"}
