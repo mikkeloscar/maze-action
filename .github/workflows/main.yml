@@ -27,6 +27,7 @@ jobs:
         - {name: "gtk3-optional-csd"}
         - {name: "jdk"}
         - {name: "gtk-theme-arc"}
+        - {name: "semgrep-bin"}
         # - {name: "gtk-theme-arc-git"}
         # - {name: "moka-icon-theme-git"}
         # - {name: "android-sdk"}
