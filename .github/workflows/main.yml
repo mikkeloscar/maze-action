@@ -16,7 +16,7 @@ jobs:
         - {name: "dropbox", signing_keys: "FC918B335044912E"}
         - {name: "google-chrome"}
         - {name: "scaleway-cli"}
-        - {name: "google-cloud-sdk"}
+        # - {name: "google-cloud-sdk"}
         - {name: "pacaur"}
         - {name: "auracle-git"}
         - {name: "virtualbox-ext-oracle"}
