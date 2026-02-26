@@ -61,6 +61,7 @@ jobs:
         # - {name: "trivy-bin"}
         - {name: "grype-bin"}
         - {name: "steampipe-bin"}
+        - {name: "claude-code"}
         # - {name: "ausweisapp2"}
         # - {name: "crictl-bin"}
         # - {name: "mkdocs-material"}
