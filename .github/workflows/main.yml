@@ -71,7 +71,7 @@ jobs:
     name: Build Maze Packages
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
     - name: "${{ matrix.package.name }}"
       uses: ./
       with:
