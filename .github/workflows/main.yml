@@ -62,6 +62,7 @@ jobs:
         - {name: "grype-bin"}
         - {name: "steampipe-bin"}
         - {name: "powerpipe-bin"}
+        - {name: "aws-nuke-bin"}
         - {name: "claude-code"}
         # - {name: "ausweisapp2"}
         # - {name: "crictl-bin"}
