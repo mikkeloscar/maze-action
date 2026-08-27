@@ -25,7 +25,7 @@ jobs:
         - {name: "chromium-widevine"}
         - {name: "profile-sync-daemon"}
         - {name: "gtk3-optional-csd"}
-        - {name: "jdk"}
+        # - {name: "jdk"}
         - {name: "gtk-theme-arc"}
         # - {name: "semgrep-bin"}
         # - {name: "gtk-theme-arc-git"}
