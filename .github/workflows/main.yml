@@ -69,6 +69,7 @@ jobs:
         # - {name: "mkdocs-material"}
         # - {name: "mkdocs-material-extensions-git"}
         # - {name: "eksctl"}
+        - {name: "github-copilot-cli-bin"}
     runs-on: ubuntu-latest
     name: Build Maze Packages
     steps:
