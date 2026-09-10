@@ -71,6 +71,7 @@ jobs:
         # - {name: "eksctl"}
         - {name: "github-copilot-cli-bin"}
         - {name: "opa"}
+        - {name: "databricks-cli-bin"}
     runs-on: ubuntu-latest
     name: Build Maze Packages
     steps:
