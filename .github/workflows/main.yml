@@ -72,6 +72,7 @@ jobs:
         - {name: "github-copilot-cli-bin"}
         - {name: "opa"}
         - {name: "databricks-cli-bin"}
+        - {name: "nono-ai-bin"}
     runs-on: ubuntu-latest
     name: Build Maze Packages
     steps:
