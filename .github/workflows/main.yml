@@ -73,6 +73,7 @@ jobs:
         - {name: "opa"}
         - {name: "databricks-cli-bin"}
         - {name: "nono-ai-bin"}
+        - {name: "ccusage"}
     runs-on: ubuntu-latest
     name: Build Maze Packages
     steps:
